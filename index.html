@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+<head>
+<meta charset="utf-8">
+<title>Design On Fastore</title>
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Tajawal:400, 700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+<link rel="stylesheet" href="./Styles/styles.css">
+<!--Manifiesto-->
+<link rel="manifest" href="./Manifest/manifest.json">
+<meta name="theme-color" content="#1a1a1a">
+<!-- Detección de Icono de PWA -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/icon_16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/icon_32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="./img/icon_64x64.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/icon_96x96.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="./img/icon_128x128.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/icon_192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="./img/icon_256x256.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="./img/icon_384x384.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./img/icon_512x512.png">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="./img/icon_1024x1024.png">
+<!--meta etiquetas PWA en ios-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="PWA-Doft">
+ <!-- Metatags Windows -->
+  <meta name="msapplication-TileColor" content="#F7DF1E">
+  <meta name="msapplication-TileImage" content="./img/icon_192x192.png">
+<!--SW-->
+<script src="./js/script.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+<!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">-->
+</head>
+<body>
+	<div id="color_to_layout"></div>
+	<header>
+		<div id="menuM" onClick="shownav()"><i class="fas fa-bars"></i></div>
+		<a href="index.html" id="Logo">
+			<img src="./Logos/Official_logo_mejorado.svg" alt="Doft">
+		</a>
+		<div id="searchM" onClick="showme()"><i class="fas fa-search"></i></div>
+		<div id="SE"><form><input type="text" name="Buscar" required="" autocomplete="off" placeholder="¿Qué buscas?"><button class="cancel-search" type="reset" value="reset"><i class="fas fa-times"></i></button><button><i class="fas fa-search"></i></button></form></div>
+		<nav>
+			<div id="list_menuP">
+				<ul>
+					<li><a href="#">estilo</a>
+					<div class="triangulo_flecha"></div>
+						<div class="Mostrar_nav_flotante">
+							<div class="lista_esencial_">
+								<p>Tienda</p>
+								<div class="button_genero_contenido_switch">
+									<div class="hombre_button mostrar">
+										<svg xmlns="http://www.w3.org/2000/svg" height="60px" width="170px" viewbox="0 -10 176 66">
+										  <path d="M64.8 41H6.5C5.1 41 4 40.1 4 39V14c0-1.7 1.7-3 3.7-3H84L65.9 40.4c-.2.4-.7.6-1.1.6z" fill="#1a1a1a" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text class="lado_A" fill="#fff" font-size="12" text-anchor="middle" x="38" y="30">
+												Mujeres
+											</text>
+										  <path d="M158.1 50H70l23.4-39.4c.2-.4.5-.6.9-.6h62.9c1.6 0 2.8 1.4 2.8 3.1V48c0 1.1-.8 2-1.9 2z" fill="#fff" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text fill="#1a1a1a" font-size="14" text-anchor="middle" x="122" y="35" font-weight="600">
+												Hombres
+											</text>
+										</svg>
+									</div>
+									<div class="mujer_button">
+										<svg xmlns="http://www.w3.org/2000/svg" height="60px" width="170px" viewbox="0 -10 176 66">
+										  <path d="M68.3 49H6.1c-1.5 0-2.6-1.2-2.6-2.6V13.9c0-2.2 1.8-3.9 3.9-3.9h84.1l-22 38.3c-.2.4-.7.7-1.2.7z" fill="#fff" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text fill="#1a1a1a" font-size="14" text-anchor="middle" x="40" y="34" font-weight="600">
+												Mujeres
+											</text>
+										  <path d="M164.1 41L84 40.5l15.1-29.1c.2-.3.5-.4.9-.4h63.2c1.6 0 2.9 1 2.9 2.3v26.2c-.1.8-1 1.5-2 1.5z" fill="#1a1a1a" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text class="lado_B" fill="#fff" font-size="12" text-anchor="middle " x="129" y="30">
+												Hombres
+											</text>
+										</svg>
+									</div>
+								</div>
+								<ul>
+									<li><a href="#">Nueva Colección</a></li>
+									<li><a href="#">Accesorios</a></li>
+									<li><a href="#">Camisetas &amp; Camisas</a></li>
+									<li><a href="#">Chaquetas</a></li>
+									<li><a href="#">Pantalones</a></li>
+									<li><a href="#">Sudaderas</a></li> 
+								</ul>
+							</div>
+							<div class="numero3">
+								<div class="unicamente-bordes_corto">
+								<br>
+								</div>
+							</div>
+							<div class="whats_hot_uwu">
+								<p>What`s Hot</p>
+								<div class="unicamente-bordes">
+								<br>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">personaliza</a>
+					<div class="triangulo_flecha"></div>
+						<div class="Mostrar_nav_flotante">
+							<div class="lista_esencial_">
+								<p>Tienda</p>
+								<div class="button_genero_contenido_switch">
+									<div class="hombre_button mostrar">
+										<svg xmlns="http://www.w3.org/2000/svg" height="60px" width="170px" viewbox="0 -10 176 66">
+										  <path d="M64.8 41H6.5C5.1 41 4 40.1 4 39V14c0-1.7 1.7-3 3.7-3H84L65.9 40.4c-.2.4-.7.6-1.1.6z" fill="#1a1a1a" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text class="lado_A" fill="#fff" font-size="12" text-anchor="middle" x="38" y="30">
+												Mujeres
+											</text>
+										  <path d="M158.1 50H70l23.4-39.4c.2-.4.5-.6.9-.6h62.9c1.6 0 2.8 1.4 2.8 3.1V48c0 1.1-.8 2-1.9 2z" fill="#fff" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text fill="#1a1a1a" font-size="14" text-anchor="middle" x="122" y="35" font-weight="600">
+												Hombres
+											</text>
+										</svg>
+									</div>
+									<div class="mujer_button">
+										<svg xmlns="http://www.w3.org/2000/svg" height="60px" width="170px" viewbox="0 -10 176 66">
+										  <path d="M68.3 49H6.1c-1.5 0-2.6-1.2-2.6-2.6V13.9c0-2.2 1.8-3.9 3.9-3.9h84.1l-22 38.3c-.2.4-.7.7-1.2.7z" fill="#fff" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text fill="#1a1a1a" font-size="14" text-anchor="middle" x="40" y="34" font-weight="600">
+												Mujeres
+											</text>
+										  <path d="M164.1 41L84 40.5l15.1-29.1c.2-.3.5-.4.9-.4h63.2c1.6 0 2.9 1 2.9 2.3v26.2c-.1.8-1 1.5-2 1.5z" fill="#1a1a1a" stroke="#fff" stroke-width="2" stroke-miterlimit="10"></path>
+											<text class="lado_B" fill="#fff" font-size="12" text-anchor="middle " x="129" y="30">
+												Hombres
+											</text>
+										</svg>
+									</div>
+								</div>
+								<ul>
+									<li><a href="#">Nueva Colección</a></li>
+									<li><a href="#">Accesorios</a></li>
+									<li><a href="#">Camisetas &amp; Camisas</a></li>
+									<li><a href="#">Chaquetas</a></li>
+									<li><a href="#">Pantalones</a></li>
+									<li><a href="#">Sudaderas</a></li> 
+								</ul>
+							</div>
+							<div class="numero3">
+								<div class="unicamente-bordes_corto">
+								<br>
+								</div>
+							</div>
+							<div class="whats_hot_uwu">
+								<p>What`s Hot</p>
+								<div class="unicamente-bordes">
+								<br>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">novedades</a></li>
+				</ul>
+			</div>
+			<div id="list_menu_mobile">
+				<div id="close"><i class="far fa-times-circle" onClick="closenav()"></i></div>
+				<div id="acceso_rápido" class="clearfix">
+					<span id="loginO"><i class="fas fa-user"></i></span>
+					<span id="notificacionesO"><i class="fas fa-bell"></i></span>
+				</div>
+				<ul id="principal_mobile_list">
+					<li><a href="#"><i class="fas fa-caret-right"></i>estilo</a>
+						<ul>
+							<li><a href="#">Nueva Colección</a></li>
+							<li><a href="#">Accesorios</a></li>
+							<li><a href="#">Camisetas &amp; Camisas</a></li>
+							<li><a href="#">Chaquetas</a></li>
+							<li><a href="#">Pantalones</a></li>
+							<li><a href="#">Sudaderas</a></li> 
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-caret-right"></i>personaliza</a>
+						<ul>
+							<li><a href="#">Nueva Colección</a></li>
+							<li><a href="#">Accesorios</a></li>
+							<li><a href="#">Camisetas &amp; Camisas</a></li>
+							<li><a href="#">Chaquetas</a></li>
+							<li><a href="#">Pantalones</a></li>
+							<li><a href="#">Sudaderas</a></li> 
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-caret-right"></i>novedades</a>
+						<ul>
+							<li><a href="#">Nueva Colección</a></li>
+							<li><a href="#">Accesorios</a></li>
+							<li><a href="#">Camisetas &amp; Camisas</a></li>
+							<li><a href="#">Chaquetas</a></li>
+							<li><a href="#">Pantalones</a></li>
+							<li><a href="#">Sudaderas</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div id="Mobile_B">
+<div id="Home_Search_bar_nav"><form><input type="text" name="Buscar" required="" autocomplete="off" placeholder="¿Qué buscas?..."><button class="cancel-search" type="reset" value="reset"><i class="fas fa-times"></i></button></form></div>
+<img src="./Images/83-940x496.jpg" alt="garzón">
+</div>
+<section>
+</section>
+<div class="footer_content">
+	<i class="fas fa-times" onClick="closefooter()"></i>
+</div> 
+<footer id="listas_doft">
+	<ul>
+		<li name="content"><a>Social-media</a></li>
+		<li><a>Novedades</a></li>
+		<li><a>Acerca de</a></li>
+		<li name="content"><a>Ayuda</a></li>
+		<li name="content"><a>Contacto</a></li>
+	</ul>
+	<ul>
+		<li><a><i class="fab fa-rocketchat"></i></a></li>
+		<li><a><i class="fas fa-envelope"></i></a></li>
+	</ul>
+	<ul>
+		<li><a>©Doft 2019. Todos los derechos reservados. Powered by</a></li>
+		<li><img src="./Logos/Colaboracion_EJ2_blanco.svg" alt="EJ"></li>
+	</ul>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>-->
+	<script>
+	
+		function showme() {
+			$("#Home_Search_bar_nav").slideToggle(150);
+		}
+		
+		$(".lado_A").click(function() {
+			$("div").removeClass("mostrar")
+			$("div.hombre_button").addClass("mostrar")
+		});
+
+		$(".lado_B").click(function() {
+			$("div").removeClass("mostrar")
+			$("div.mujer_button").addClass("mostrar")
+		});
+		
+		function animar(opacidad, posicion) {
+			[opacidad, posicion].toString();
+			$('#color_to_layout').animate({"opacity": opacidad }, 370);
+			var override = function () {document.getElementById('color_to_layout').style.zIndex = posicion;}
+			switch(opacidad){
+				case 0:
+					setTimeout(override, 370);
+				break;
+				case 1:
+					setTimeout(override, 0);
+				break; 
+			}
+		}
+		
+		function shownav() {
+			$('#list_menu_mobile').css({"left":"0%", "background":"#fff", "z-index":"99"});
+			animar(1, 50);
+		}
+		
+		function closenav() {
+			$('#list_menu_mobile').css({"left":"-70%"});
+			animar(0, -99);
+		}
+		
+		$('li[name="content"]').on('click', function() {
+			$('.footer_content').addClass("footer_estructure");
+			animar(1, 50);
+		});
+		
+		function closefooter() {
+			$('.footer_content').removeClass("footer_estructure");
+			animar(0, -99);
+		}
+		
+		$('#color_to_layout').click(function () {
+			closenav();
+			closefooter();
+		});
+		
+		$('#principal_mobile_list li > ul').click(function () {
+			closenav();
+		});
+		
+		$('#principal_mobile_list > li > a').on('click', function () {
+			var $encontrado = $(this).parent('li');
+			$encontrado.find('> ul').slideToggle(200);
+			$('.fa-caret-right').not($encontrado.find('.fa-caret-right').toggleClass('rotate')).removeClass('rotate');
+			$('#principal_mobile_list li > ul').not($encontrado.find('> ul')).slideUp();
+		});
+		
+	</script>
+</body>
+</html>

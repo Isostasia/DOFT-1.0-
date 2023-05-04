@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		box-shadow: 0px 0px 10px 1px #262626;
+	}
+	
+	nav {
+		display: table;
+		margin: 0 auto;
+	}
+	
+	ul {
+		list-style: none;
+	}
+	
+	nav > ul > li {
+		display: table-cell;
+		line-height: 4em;
+		padding: 0 10px;
+	}
+	
+	nav a {
+		font-size: 16px;
+		font-family: Helvetica, "sans-serif";
+		text-decoration: none;
+		padding: 5px;
+		color: #000;
+	}
+	
+	.nav_comun {
+		max-height: 0;
+		width: 1000px;
+		position: absolute;
+		background: #1a1a1a;
+		left: 50%;
+		margin-left: -500px;
+		overflow: hidden;
+		opacity: 0;
+		border: 0;
+		-webkit-transition: max-height 250ms ease-in-out;
+		-moz-transition: max-height 250ms ease-in-out;
+		-o-transition: max-height 250ms ease-in-out;
+		transition: max-height 250ms ease-in-out;
+	}
+
+	li li a {
+		color: #fff;
+	}
+
+	[class^=contenedor] {
+		display: table-cell;
+		opacity: 0;
+		-webkit-transition: opacity 220ms 0.15s;
+		-moz-transition: opacity 220ms 0.15s;
+		-o-transition: opacity 220ms 0.15s;
+		transition: opacity 220ms 0.15s;
+	}
+	
+	nav > ul > li:hover {
+		background: #1a1a1a;
+	}
+	
+	nav > ul > li:hover a {
+		color:#fff;
+	}
+	
+	nav > ul > li:hover .nav_comun {
+		max-height: 500px;
+		border: #fff 2px solid;
+		opacity: 1;
+	}
+
+	nav > ul > li:hover .nav_comun > * {
+		opacity: 1;
+	}
+	
+	nav > ul > li:hover .triangulo_flecha {
+		opacity: 1;
+	}
+	
+	.nav_comun > div:nth-child(2n-1) {
+		width: 300px;
+	}
+	
+	.nav_comun > div:nth-child(2) {
+		width: 400px;
+	}
+	
+	.triangulo_flecha {
+		position: relative;
+		opacity: 0;
+	}
+	
+	.triangulo_flecha::after, .triangulo_flecha::before {
+		bottom: -2px;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		z-index: 99;
+	}
+
+	.triangulo_flecha::after {
+		border-color: transparent;
+		border-bottom-color: #1a1a1a;
+		border-width: 20px;
+		margin-left: -20px;
+	}
+	.triangulo_flecha::before {
+		border-color: transparent;
+		border-bottom-color: #fff;
+		border-width: 23px;
+		margin-left: -23px;
+	}
+
